@@ -69,6 +69,6 @@ Synthetic data; linear-ish formula so Ridge wins; K-means finds no real clusters
 the high_risk label uses the whole-sample median (as the assignment defines it); prototype CORS is open.
 
 ## Repository
-Repository URL: `<add>`  |  Final commit hash: `<add>`
+Repository URL: https://github.com/alain143/AI_A2_2528075.git  |  Final commit hash: https://github.com/alain143/AI_A2_2528075/commit/9e918fe48903bf3fa192671ff45a10695bb8bada
 
 
