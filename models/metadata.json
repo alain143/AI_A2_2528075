@@ -1,0 +1,86 @@
+{
+  "verification_code": "AI-A2-8075",
+  "student_name": "IGIRANEZA Alain Providence",
+  "student_id": "ug2528075@ines.ac.rw",
+  "registration_number": "25/28075",
+  "seed": 8075,
+  "dataset_sha256": "a0ae7a32527e96b1c0f09531b4ebf2806bcb34fa244e1a631d16a8ec853c47df",
+  "dataset_file": "AI_A2_2528075.csv",
+  "rows_raw": 282,
+  "rows_clean": 279,
+  "train_rows": 223,
+  "test_rows": 56,
+  "features": [
+    "rainfall_mm",
+    "avg_temp_c",
+    "soil_moisture_pct",
+    "fertilizer_kg",
+    "field_size_ha",
+    "season",
+    "cooperative_support"
+  ],
+  "selected_models": {
+    "regression": "ridge",
+    "classification": "logistic_regression",
+    "clustering": "kmeans(K=2)"
+  },
+  "test_metrics": {
+    "regression": {
+      "mae": 0.9436582333546726,
+      "rmse": 1.15392692423296,
+      "r2": 0.789202856711447
+    },
+    "classification": {
+      "precision": 0.9629629629629629,
+      "recall": 0.9285714285714286,
+      "f1": 0.9454545454545454,
+      "roc_auc": 0.9897959183673469
+    }
+  },
+  "n_clusters": 2,
+  "cluster_profiles": [
+    {
+      "cluster": 0,
+      "n_train": 118,
+      "n_test": 30,
+      "center_original_units": {
+        "rainfall_mm": 881.9469,
+        "avg_temp_c": 19.51,
+        "soil_moisture_pct": 53.2411,
+        "fertilizer_kg": 157.779,
+        "field_size_ha": 1.537
+      },
+      "cooperative_support_share": 0.4492,
+      "season_A_share": 0.5424,
+      "mean_yield_tons_descriptive": 11.2278,
+      "high_risk_rate_descriptive": 0.2797,
+      "profile": "Cluster 0 (118 training farms): smaller fields."
+    },
+    {
+      "cluster": 1,
+      "n_train": 105,
+      "n_test": 26,
+      "center_original_units": {
+        "rainfall_mm": 1122.0482,
+        "avg_temp_c": 19.4334,
+        "soil_moisture_pct": 45.0561,
+        "fertilizer_kg": 84.7161,
+        "field_size_ha": 2.7494
+      },
+      "cooperative_support_share": 0.5524,
+      "season_A_share": 0.4381,
+      "mean_yield_tons_descriptive": 12.1364,
+      "high_risk_rate_descriptive": 0.7429,
+      "profile": "Cluster 1 (105 training farms): higher rainfall, lighter fertilizer use, larger fields."
+    }
+  ],
+  "library_versions": {
+    "python": "3.12.2",
+    "numpy": "2.5.4",
+    "pandas": "3.0.6",
+    "scikit-learn": "1.9.1",
+    "matplotlib": "3.11.2",
+    "joblib": "1.6.0"
+  },
+  "notice": "Classroom decision-support prototype trained on SYNTHETIC data. It does not replace an agronomist and must not be used to decide access to finance, insurance or public services."
+}

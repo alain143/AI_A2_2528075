@@ -1,0 +1,37 @@
+{
+  "verification_code": "AI-A2-8075",
+  "validation": {
+    "n_rows_raw": 282,
+    "missing_by_column": {
+      "soil_moisture_pct": 14,
+      "fertilizer_kg": 14
+    },
+    "n_duplicate_rows": 3,
+    "leakage_check": "passed: no yield_tons / yield_per_ha / high_risk in model inputs",
+    "expected": {
+      "base_rows": 279,
+      "raw_rows": 282,
+      "missing_per_column": 14,
+      "duplicates": 3
+    },
+    "matches_expected": true
+  },
+  "cleaning": {
+    "rows_before": 282,
+    "duplicates_removed": 3,
+    "rows_after": 279,
+    "missing_after_cleaning": {
+      "soil_moisture_pct": 14,
+      "fertilizer_kg": 14
+    },
+    "missing_handling": "median imputation (numeric) fitted on the training split only"
+  },
+  "split": {
+    "random_state": 8075,
+    "test_size": 0.2,
+    "stratified_on": "high_risk",
+    "train_rows": 223,
+    "test_rows": 56
+  },
+  "sha256": "a0ae7a32527e96b1c0f09531b4ebf2806bcb34fa244e1a631d16a8ec853c47df"
+}

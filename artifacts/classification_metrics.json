@@ -1,0 +1,122 @@
+{
+  "verification_code": "AI-A2-8075",
+  "target": "high_risk",
+  "test_rows": 56,
+  "positive_class": "high_risk = 1 (yield per hectare below the median)",
+  "models": {
+    "majority_baseline": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5,
+      "confusion_matrix": {
+        "labels": [
+          "not_high_risk(0)",
+          "high_risk(1)"
+        ],
+        "matrix": [
+          [
+            28,
+            0
+          ],
+          [
+            28,
+            0
+          ]
+        ],
+        "tn": 28,
+        "fp": 0,
+        "fn": 28,
+        "tp": 0
+      },
+      "cv_f1_mean": 0.0,
+      "cv_f1_std": 0.0
+    },
+    "logistic_regression": {
+      "precision": 0.9629629629629629,
+      "recall": 0.9285714285714286,
+      "f1": 0.9454545454545454,
+      "roc_auc": 0.9897959183673469,
+      "confusion_matrix": {
+        "labels": [
+          "not_high_risk(0)",
+          "high_risk(1)"
+        ],
+        "matrix": [
+          [
+            27,
+            1
+          ],
+          [
+            2,
+            26
+          ]
+        ],
+        "tn": 27,
+        "fp": 1,
+        "fn": 2,
+        "tp": 26
+      },
+      "cv_f1_mean": 0.945426969390569,
+      "cv_f1_std": 0.023401658734123247
+    },
+    "random_forest": {
+      "precision": 0.9285714285714286,
+      "recall": 0.9285714285714286,
+      "f1": 0.9285714285714286,
+      "roc_auc": 0.9732142857142857,
+      "confusion_matrix": {
+        "labels": [
+          "not_high_risk(0)",
+          "high_risk(1)"
+        ],
+        "matrix": [
+          [
+            26,
+            2
+          ],
+          [
+            2,
+            26
+          ]
+        ],
+        "tn": 26,
+        "fp": 2,
+        "fn": 2,
+        "tp": 26
+      },
+      "cv_f1_mean": 0.903336886011658,
+      "cv_f1_std": 0.028767885419021037
+    },
+    "gradient_boosting": {
+      "precision": 0.9259259259259259,
+      "recall": 0.8928571428571429,
+      "f1": 0.9090909090909091,
+      "roc_auc": 0.9579081632653061,
+      "confusion_matrix": {
+        "labels": [
+          "not_high_risk(0)",
+          "high_risk(1)"
+        ],
+        "matrix": [
+          [
+            26,
+            2
+          ],
+          [
+            3,
+            25
+          ]
+        ],
+        "tn": 26,
+        "fp": 2,
+        "fn": 3,
+        "tp": 25
+      },
+      "cv_f1_mean": 0.9143528816986854,
+      "cv_f1_std": 0.04478864671398925
+    }
+  },
+  "selected_model": "logistic_regression",
+  "selection_reason": "logistic_regression has the highest 5-fold stratified cross-validated F1 on the training set (0.9454); chosen before looking at the test set. Test result: precision 0.9630, recall 0.9286, F1 0.9455, ROC-AUC 0.9898. The majority baseline cannot find any high-risk farm (recall 0.0000)."
+}

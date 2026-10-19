@@ -1,0 +1,79 @@
+{
+  "verification_code": "AI-A2-8075",
+  "features_used": [
+    "rainfall_mm",
+    "avg_temp_c",
+    "soil_moisture_pct",
+    "fertilizer_kg",
+    "field_size_ha",
+    "season",
+    "cooperative_support"
+  ],
+  "scaling": "StandardScaler + one-hot season (fit on training rows)",
+  "k_scores": [
+    {
+      "k": 2,
+      "silhouette": 0.14493001917131862,
+      "inertia": 1083.3349894888465
+    },
+    {
+      "k": 3,
+      "silhouette": 0.13280140013323263,
+      "inertia": 968.7916997632803
+    },
+    {
+      "k": 4,
+      "silhouette": 0.14139585110353398,
+      "inertia": 869.3878588242092
+    },
+    {
+      "k": 5,
+      "silhouette": 0.13826206137961874,
+      "inertia": 803.0229775419971
+    },
+    {
+      "k": 6,
+      "silhouette": 0.14187092198214454,
+      "inertia": 751.2787591083151
+    }
+  ],
+  "selected_k": 2,
+  "selection_rule": "highest silhouette score among K=2..6",
+  "cluster_profiles": [
+    {
+      "cluster": 0,
+      "n_train": 118,
+      "n_test": 30,
+      "center_original_units": {
+        "rainfall_mm": 881.9469,
+        "avg_temp_c": 19.51,
+        "soil_moisture_pct": 53.2411,
+        "fertilizer_kg": 157.779,
+        "field_size_ha": 1.537
+      },
+      "cooperative_support_share": 0.4492,
+      "season_A_share": 0.5424,
+      "mean_yield_tons_descriptive": 11.2278,
+      "high_risk_rate_descriptive": 0.2797,
+      "profile": "Cluster 0 (118 training farms): smaller fields."
+    },
+    {
+      "cluster": 1,
+      "n_train": 105,
+      "n_test": 26,
+      "center_original_units": {
+        "rainfall_mm": 1122.0482,
+        "avg_temp_c": 19.4334,
+        "soil_moisture_pct": 45.0561,
+        "fertilizer_kg": 84.7161,
+        "field_size_ha": 2.7494
+      },
+      "cooperative_support_share": 0.5524,
+      "season_A_share": 0.4381,
+      "mean_yield_tons_descriptive": 12.1364,
+      "high_risk_rate_descriptive": 0.7429,
+      "profile": "Cluster 1 (105 training farms): higher rainfall, lighter fertilizer use, larger fields."
+    }
+  ],
+  "interpretation": "K=2 has the highest silhouette (0.1449), which indicates no substantial structure (Kaufman-Rousseeuw scale). Clusters were built from the seven input features only; yield and risk are shown for description, not used."
+}

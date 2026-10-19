@@ -1,0 +1,37 @@
+{
+  "verification_code": "AI-A2-8075",
+  "target": "yield_tons",
+  "test_rows": 56,
+  "models": {
+    "mean_baseline": {
+      "mae": 2.0293414638052534,
+      "rmse": 2.5462221437276753,
+      "r2": -0.026362294750473803,
+      "cv_rmse_mean": 2.554643467408144,
+      "cv_rmse_std": 0.1379832171282253
+    },
+    "ridge": {
+      "mae": 0.9436582333546726,
+      "rmse": 1.15392692423296,
+      "r2": 0.789202856711447,
+      "cv_rmse_mean": 1.0630776052862205,
+      "cv_rmse_std": 0.08160791791090945
+    },
+    "random_forest": {
+      "mae": 1.1449344319646308,
+      "rmse": 1.5258747000857855,
+      "r2": 0.6314080449376951,
+      "cv_rmse_mean": 1.3678867487391648,
+      "cv_rmse_std": 0.041939160559028195
+    },
+    "gradient_boosting": {
+      "mae": 1.0168429597952957,
+      "rmse": 1.3158385813234164,
+      "r2": 0.7258972834522777,
+      "cv_rmse_mean": 1.217768439655294,
+      "cv_rmse_std": 0.1422295587288672
+    }
+  },
+  "selected_model": "ridge",
+  "selection_reason": "ridge has the lowest 5-fold cross-validated RMSE on the training set (1.0631 t) among the candidates; it was chosen before looking at the test set. On the held-out test set it reaches MAE 0.9437, RMSE 1.1539, R2 0.7892 versus the mean baseline's RMSE 2.5462 and R2 -0.0264."
+}

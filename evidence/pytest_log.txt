@@ -1,0 +1,28 @@
+============================= test session starts =============================
+platform win32 -- Python 3.12.2, pytest-9.1.1, pluggy-1.7.0 -- C:\Users\NONO\Downloads\AI_A2_2528075\AI_A2_2528075\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\NONO\Downloads\AI_A2_2528075\AI_A2_2528075
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.15.1
+collecting ... collected 11 items
+
+tests/test_system.py::test_valid_inference_returns_all_fields PASSED     [  9%]
+tests/test_system.py::test_missing_field_is_rejected_with_field_name PASSED [ 18%]
+tests/test_system.py::test_wrong_type_is_rejected PASSED                 [ 27%]
+tests/test_system.py::test_out_of_range_values_are_rejected PASSED       [ 36%]
+tests/test_system.py::test_target_fields_are_rejected_as_leakage PASSED  [ 45%]
+tests/test_system.py::test_dataset_is_reproducible_and_matches_recorded_fingerprint PASSED [ 54%]
+tests/test_system.py::test_raw_dataset_has_the_deliberate_problems_and_validates PASSED [ 63%]
+tests/test_system.py::test_seed_must_equal_last_four_digits PASSED       [ 72%]
+tests/test_system.py::test_saved_metrics_agree_with_test_predictions_csv PASSED [ 81%]
+tests/test_system.py::test_api_health_model_info_and_predict PASSED      [ 90%]
+tests/test_system.py::test_api_rejects_invalid_requests_with_4xx PASSED  [100%]
+
+============================== warnings summary ===============================
+tests/test_system.py::test_api_health_model_info_and_predict
+  C:\Users\NONO\Downloads\AI_A2_2528075\AI_A2_2528075\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 11 passed, 1 warning in 5.33s ========================
